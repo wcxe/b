@@ -36,6 +36,29 @@
             document.getElementById("time").innerHTML = currentTime;
         }
         setInterval("time()", 1000);
+        
+        
+        
+        
+        function password() {
+            var testV = 1;
+            var pass1 = prompt('Please enter password again!', '');
+            while (testV < 3) {
+                if (!pass1)
+                    history.go(-1);
+                if (pass1 == "4417") {//初始密码123   
+                    alert('Successful Login!');
+                    break;
+                }
+                testV += 1;
+                var pass1 =
+                    prompt('Password Error!:');
+            }
+            if (pass1 != "password" & testV == 3)
+                history.go(-1);
+            return " ";
+        }
+        document.write(password());  
     </script>
 
     </head>
